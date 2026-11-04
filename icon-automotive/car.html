@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- El título se completa solo con el nombre del auto (js/car-detail.js) -->
+  <title>Ficha del auto | ICON-automotive</title>
+  <meta name="description" content="Ficha técnica completa: especificaciones, equipamiento e historial del auto en ICON-automotive.">
+  <meta name="theme-color" content="#064E3B">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 4 8 16v18c0 14 10 22 24 26 14-4 24-12 24-26V16z' fill='%230B6B4F' stroke='%23C9A24B' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="page-car">
+  <a class="skip-link" href="#car-page">Saltar al contenido</a>
+
+  <!-- data-nav="solid": en esta página la barra siempre es negra -->
+  <header class="nav" id="nav" data-nav="solid">
+    <div class="nav__inner container">
+      <a class="logo" href="index.html" aria-label="ICON-automotive, ir al inicio">
+        <img class="logo__mark" src="images/brand/logo.png" alt="Escudo de ICON-automotive" width="34" height="48">
+        <span class="logo__text"><span class="logo__icon">ICON</span><span class="logo__sub">AUTOMOTIVE</span></span>
+      </a>
+      <button class="nav__toggle" id="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav__menu" id="menu" aria-label="Principal">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html#inicio">Inicio</a></li>
+          <li><a class="nav__link is-active" href="index.html#catalogo">Catálogo</a></li>
+          <li><a class="nav__link" href="index.html#servicios">Servicios</a></li>
+          <li><a class="nav__link" href="index.html#nosotros">Nosotros</a></li>
+          <li><a class="nav__link" href="index.html#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Todo el contenido se arma con js/car-detail.js -->
+  <main class="car-page" id="car-page"></main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a class="logo" href="index.html" aria-label="ICON-automotive, ir al inicio">
+        <img class="logo__mark" src="images/brand/logo.png" alt="" width="34" height="48">
+        <span class="logo__text"><span class="logo__icon">ICON</span><span class="logo__sub">AUTOMOTIVE</span></span>
+      </a>
+      <ul class="footer__links">
+        <li><a href="index.html#catalogo">Catálogo</a></li>
+        <li><a href="index.html#servicios">Servicios</a></li>
+        <li><a href="index.html#nosotros">Nosotros</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+      <p class="footer__copy">© <span id="year">2026</span> ICON-automotive. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="js/cars-data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/car-detail.js"></script>
+</body>
+</html>

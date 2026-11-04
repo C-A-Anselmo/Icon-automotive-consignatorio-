@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- TÍTULO Y DESCRIPCIÓN (SEO): editá estos textos -->
+  <title>ICON-automotive | Concesionaria de autos premium</title>
+  <meta name="description" content="ICON-automotive, concesionaria de autos premium. Sedán de lujo, deportivo y SUV con financiación, plan canje y garantía.">
+  <meta name="theme-color" content="#064E3B">
+
+  <!-- Open Graph (vista previa al compartir el link) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ICON-automotive | Concesionaria de autos premium">
+  <meta property="og:description" content="Autos premium con financiación, plan canje y garantía.">
+  <meta property="og:image" content="images/brand/logo.png">
+
+  <!-- Favicon (SVG embebido, no necesita archivo) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 4 8 16v18c0 14 10 22 24 26 14-4 24-12 24-26V16z' fill='%230B6B4F' stroke='%23C9A24B' stroke-width='3'/%3E%3C/svg%3E">
+
+  <!-- Tipografías: Cormorant Garamond (títulos) + Montserrat (texto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#catalogo">Saltar al contenido</a>
+
+  <!-- ========== NAVEGACIÓN ========== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <a class="logo" href="#inicio" aria-label="ICON-automotive, ir al inicio">
+        <img class="logo__mark" src="images/brand/logo.png" alt="Escudo de ICON-automotive" width="34" height="48">
+        <span class="logo__text"><span class="logo__icon">ICON</span><span class="logo__sub">AUTOMOTIVE</span></span>
+      </a>
+      <button class="nav__toggle" id="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav__menu" id="menu" aria-label="Principal">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#inicio">Inicio</a></li>
+          <li><a class="nav__link" href="#catalogo">Catálogo</a></li>
+          <li><a class="nav__link" href="#servicios">Servicios</a></li>
+          <li><a class="nav__link" href="#nosotros">Nosotros</a></li>
+          <li><a class="nav__link" href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <!-- La imagen se define en js/main.js (bloque IMAGES) -->
+      <img class="hero__bg" data-img="hero" alt="Auto deportivo en una carretera al atardecer" fetchpriority="high">
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <img class="hero__shield" src="images/brand/logo.png" alt="Escudo de ICON-automotive" width="150" height="210">
+        <h1 class="hero__title" id="hero-title">
+          <span class="hero__icon">ICON</span>
+          <span class="hero__auto">AUTOMOTIVE</span>
+        </h1>
+        <p class="hero__tag">concesionaria</p>
+        <p class="hero__slogan">Manejá tu ícono</p>
+        <p class="hero__sub">Autos premium seleccionados, revisados y listos para llevarte.</p>
+        <div class="hero__cta">
+          <a class="btn btn--gold" href="#catalogo">Ver catálogo</a>
+          <a class="btn btn--outline" href="#contacto">Contactanos</a>
+        </div>
+      </div>
+      <a class="hero__scroll" href="#catalogo" aria-label="Bajar al catálogo"><span></span></a>
+    </section>
+
+    <!-- ========== CATÁLOGO (se arma con js/cars-data.js) ========== -->
+    <section class="section section--dark" id="catalogo" aria-labelledby="catalogo-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <h2 class="section__title" id="catalogo-title">Catálogo</h2>
+          <p class="section__lead">Elegí un modelo para ver sus fotos, datos técnicos y equipamiento.</p>
+        </header>
+        <div class="catalog__tabs reveal" id="catalog-tabs" role="tablist" aria-label="Autos disponibles"></div>
+        <div class="catalog__panel" id="catalog-panel" role="tabpanel" aria-live="polite"></div>
+        <p class="catalog__hint">Tip: usá las flechas ← → del teclado o deslizá en el celular para cambiar de auto.</p>
+      </div>
+    </section>
+
+    <!-- ========== SERVICIOS ========== -->
+    <section class="section section--light" id="servicios" aria-labelledby="servicios-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <h2 class="section__title" id="servicios-title">Servicios</h2>
+          <p class="section__lead">Te acompañamos antes, durante y después de la compra.</p>
+        </header>
+        <div class="services">
+          <article class="service reveal">
+            <svg class="service__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 30l3-10a4 4 0 0 1 4-3h22a4 4 0 0 1 4 3l3 10"/><rect x="4" y="30" width="40" height="8" rx="3"/><circle cx="13" cy="34" r="1.5"/><circle cx="35" cy="34" r="1.5"/><path d="M10 38v3M38 38v3"/></svg>
+            <h3 class="service__title">Venta de vehículos</h3>
+            <p>Autos premium inspeccionados punto por punto, con historial claro y documentación al día.</p>
+          </article>
+          <article class="service reveal">
+            <svg class="service__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="12" width="38" height="24" rx="3"/><circle cx="24" cy="24" r="6"/><path d="M10 18v.01M38 30v.01"/></svg>
+            <h3 class="service__title">Financiación</h3>
+            <p>Planes a medida de tu presupuesto, con cuotas claras y respuesta rápida.</p>
+          </article>
+          <article class="service reveal">
+            <svg class="service__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 20h30l-6-6M40 28H10l6 6"/></svg>
+            <h3 class="service__title">Plan canje</h3>
+            <p>Tasamos tu usado de forma transparente y lo tomamos como parte de pago.</p>
+          </article>
+          <article class="service reveal">
+            <svg class="service__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 5l16 6v11c0 10-7 17-16 21-9-4-16-11-16-21V11z"/><path d="M17 24l5 5 9-10"/></svg>
+            <h3 class="service__title">Garantía y posventa</h3>
+            <p>Cobertura incluida en cada unidad y servicio técnico para mantener tu auto como nuevo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== NOSOTROS ========== -->
+    <section class="section section--green" id="nosotros" aria-labelledby="nosotros-title">
+      <div class="container">
+        <div class="about">
+          <div class="about__media reveal">
+            <img data-img="about" alt="Interior de un auto de lujo con detalles en cuero" loading="lazy">
+          </div>
+          <div class="about__text reveal">
+            <h2 class="section__title section__title--left" id="nosotros-title">Nosotros</h2>
+            <p>En ICON-automotive creemos que comprar un auto premium tiene que ser una experiencia tan buena como manejarlo. Seleccionamos cada unidad, la revisamos y te explicamos todo sin vueltas.</p>
+            <p>Nuestro objetivo es simple: que encuentres el auto que querés, con información clara y un trato cercano.</p>
+            <!-- FUNDADORES: editá los nombres acá -->
+            <ul class="founders" aria-label="Fundadores">
+              <li class="founders__item"><span class="founders__name">Cristopher Aguirre</span><span class="founders__role">Fundador</span></li>
+              <li class="founders__item"><span class="founders__name">Iván García</span><span class="founders__role">Fundador</span></li>
+            </ul>
+          </div>
+        </div>
+        <!-- CONTADORES: cambiá data-count por el número real -->
+        <div class="stats">
+          <div class="stat reveal"><span class="stat__num" data-count="15" data-suffix="+">0</span><span class="stat__label">Años de experiencia</span></div>
+          <div class="stat reveal"><span class="stat__num" data-count="1200" data-suffix="+">0</span><span class="stat__label">Autos vendidos</span></div>
+          <div class="stat reveal"><span class="stat__num" data-count="980" data-suffix="+">0</span><span class="stat__label">Clientes felices</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TESTIMONIOS ========== -->
+    <section class="section section--dark" id="testimonios" aria-labelledby="testimonios-title">
+      <div class="container container--narrow">
+        <header class="section__head reveal">
+          <h2 class="section__title" id="testimonios-title">Clientes que ya manejan su ícono</h2>
+        </header>
+        <div class="carousel reveal" id="carousel" aria-roledescription="carrusel" aria-label="Testimonios">
+          <div class="carousel__viewport">
+            <div class="carousel__track" id="carousel-track">
+              <figure class="quote">
+                <blockquote>Me explicaron cada detalle del auto y de la financiación. Compré con total tranquilidad.</blockquote>
+                <figcaption>Martín R. · Cliente</figcaption>
+              </figure>
+              <figure class="quote">
+                <blockquote>Tomaron mi usado a buen precio y la entrega fue rapidísima. El auto llegó impecable.</blockquote>
+                <figcaption>Lucía F. · Cliente</figcaption>
+              </figure>
+              <figure class="quote">
+                <blockquote>La atención después de la venta es lo que más valoro. Siempre responden y resuelven.</blockquote>
+                <figcaption>Gonzalo P. · Cliente</figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="carousel__controls">
+            <button class="carousel__btn" id="carousel-prev" aria-label="Testimonio anterior">‹</button>
+            <div class="carousel__dots" id="carousel-dots"></div>
+            <button class="carousel__btn" id="carousel-next" aria-label="Testimonio siguiente">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACTO ========== -->
+    <section class="section section--charcoal" id="contacto" aria-labelledby="contacto-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <h2 class="section__title" id="contacto-title">Contacto</h2>
+          <p class="section__lead">Contanos qué auto te interesa y te respondemos a la brevedad.</p>
+        </header>
+        <div class="contact">
+          <form class="form reveal" id="contact-form" novalidate>
+            <div class="form__row">
+              <div class="form__field"><label for="f-name">Nombre</label><input id="f-name" name="name" type="text" autocomplete="name" required><span class="form__error" data-error-for="f-name"></span></div>
+              <div class="form__field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required><span class="form__error" data-error-for="f-email"></span></div>
+            </div>
+            <div class="form__row">
+              <div class="form__field"><label for="f-phone">Teléfono</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"><span class="form__error" data-error-for="f-phone"></span></div>
+              <div class="form__field"><label for="f-car">Auto de interés</label><select id="f-car" name="car"></select></div>
+            </div>
+            <div class="form__field"><label for="f-message">Mensaje</label><textarea id="f-message" name="message" rows="5" required></textarea><span class="form__error" data-error-for="f-message"></span></div>
+            <button class="btn btn--gold" type="submit">Enviar consulta</button>
+            <p class="form__success" id="form-success" role="status" hidden>¡Gracias! Recibimos tu consulta y te vamos a contactar pronto.</p>
+          </form>
+
+          <!-- DATOS DE CONTACTO: editá teléfono, email y horarios -->
+          <aside class="info reveal" aria-label="Datos de contacto">
+            <dl class="info__list">
+              <div><dt>Teléfono</dt><dd><a href="tel:+540000000000">+54 00 0000-0000</a></dd></div>
+              <div><dt>Email</dt><dd><a href="mailto:contacto@icon-automotive.example">contacto@icon-automotive.example</a></dd></div>
+              <div><dt>Horarios</dt><dd>Lunes a viernes: 9:00 a 18:00<br>Sábados: 9:00 a 13:00</dd></div>
+            </dl>
+            <ul class="social" aria-label="Redes sociales">
+              <li><a href="#" aria-label="Instagram de ICON-automotive"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a></li>
+              <li><a href="#" aria-label="Facebook de ICON-automotive"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></svg></a></li>
+              <li><a href="#" aria-label="WhatsApp de ICON-automotive"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 20l1.4-4.2A8 8 0 1 1 8.3 18.7L4 20z"/><path d="M9 9c0 3 3 6 6 6l1-1.5-2-1-1 .8c-.8-.4-1.6-1.2-2-2l.8-1-1-2L9 9z"/></svg></a></li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a class="logo" href="#inicio" aria-label="ICON-automotive, ir al inicio">
+        <img class="logo__mark" src="images/brand/logo.png" alt="" width="34" height="48">
+        <span class="logo__text"><span class="logo__icon">ICON</span><span class="logo__sub">AUTOMOTIVE</span></span>
+      </a>
+      <ul class="footer__links">
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <p class="footer__copy">© <span id="year">2026</span> ICON-automotive. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="js/cars-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
